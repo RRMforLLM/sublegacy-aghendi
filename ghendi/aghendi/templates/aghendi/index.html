@@ -1,37 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aghendi - Home</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/index_styles.css' %}">
-</head>
-<body>
-    <!-- Header Section -->
-    <header class="header">
-        <h1 class="site-title">AGHENDI</h1>
-        {% if not user.is_authenticated %}
-            <div class="auth-links">
-                <a href="{% url 'login' %}">
-                    <button class="btn-submit">Login</button>
-                </a>
-                <a href="{% url 'signup' %}">
-                    <button class="btn-submit">Signup</button>
-                </a>
-            </div>
-        {% else %}
-            <div class="action-buttons">
-                <!-- Logout Section -->
-                <a href="{% url 'logout' %}">
-                    <button class="btn-submit">Logout</button>
-                </a>
-            </div>
-        {% endif %}
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aghendi - Home</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/index_styles.css' %}">
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="site-title">AGHENDI</h1>
+            {% if not user.is_authenticated %}
+                <div class="auth-links">
+                    <a href="{% url 'login' %}">
+                        <button class="btn-submit">Login</button>
+                    </a>
+                    <a href="{% url 'signup' %}">
+                        <button class="btn-submit">Signup</button>
+                    </a>
+                </div>
+            {% else %}
+                <div class="action-buttons">
+                    <a href="{% url 'logout' %}">
+                        <button class="btn-submit">Logout</button>
+                    </a>
+                </div>
+            {% endif %}
+        </header>
 
-    <!-- Main Content Section -->
-    {% if user.is_authenticated %}
+        {% if user.is_authenticated %}
             <div class="main-content">
                 <h2>So {{ user.username }}, what proceeds?</h2>
                 <div class="agenda-buttons">
@@ -44,12 +41,10 @@
                 </div>
             </div>
 
-            <!-- Created and Joined Agendas Section -->
             {% if user.created_agendas.exists or user.joined_agendas.exists %}
                 <div class="main-content">
                     <div class="agenda-display">
                         <div class="agenda-categories">
-                            <!-- Created Agendas Section -->
                             {% if user.created_agendas.exists %}
                                 <div class="agenda-category">
                                     <h3 class="agenda-display-title">CREATED</h3>
@@ -65,7 +60,6 @@
                                 </div>
                             {% endif %}
 
-                            <!-- Joined Agendas Section -->
                             {% if user.joined_agendas.exists %}
                                 <div class="agenda-category">
                                     <h3 class="agenda-display-title">JOINED</h3>
@@ -86,11 +80,10 @@
                     </div>
                 </div>
             {% endif %}
-    {% endif %}
+        {% endif %}
 
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p>© 2025 Aghendi. All rights reserved.</p>
-    </footer>
-</body>
+        <footer class="footer">
+            <p>© 2025 Aghendi. All rights reserved.</p>
+        </footer>
+    </body>
 </html>

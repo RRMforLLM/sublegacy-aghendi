@@ -1,8 +1,7 @@
-/* General Styles */
 body {
     font-family: 'Garamond', serif;
-    background-color: #1b1c1f; /* Inspired Dark Theme */
-    color: #e9e9e9; /* Light Text */
+    background-color: #1b1c1f;
+    color: #e9e9e9;
     margin: 0;
     padding: 0;
     display: flex;
@@ -13,7 +12,6 @@ body {
     overflow: auto;
 }
 
-/* Header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -34,7 +32,6 @@ body {
     padding: 10px;
 }
 
-/* Login and Signup Links */
 .auth-links {
     display: flex;
     gap: 15px;
@@ -51,7 +48,6 @@ body {
     color: #3e5186;
 }
 
-/* Main Content */
 .main-content {
     background: #292c30;
     padding: 30px;
@@ -70,7 +66,6 @@ body {
     margin-top: 5px;
 }
 
-/* Button Styles */
 .btn-submit {
     background: linear-gradient(135deg, #ff5763, #3e5186);
     color: #ffffff;
@@ -94,27 +89,26 @@ body {
     background: linear-gradient(135deg, #2f3d5c, #ff5763);
 }
 
-/* Agenda Section Styles */
 .agenda-buttons {
     display: flex;
     justify-content: space-evenly;
-    gap: 30px; /* Adds spacing between buttons */
+    gap: 30px;
 }
 
 .agenda-buttons a {
-    flex: 1; /* Each button will take an equal share of space */
+    flex: 1;
     text-decoration: none;
 }
 
 .agenda-buttons .btn-submit {
-    aspect-ratio: 1; /* Ensures the buttons are square */
-    width: 100%; /* Allows the buttons to fill the available space */
-    height: auto; /* Adjust height based on width for square aspect ratio */
+    aspect-ratio: 1;
+    width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
-    align-items: center; /* Centers text within the buttons */
-    padding: 0; /* Removes extra padding to maintain square shape */
-    border-radius: 15px; /* Adjust this for rounded corners */
+    align-items: center;
+    padding: 0;
+    border-radius: 15px;
     font-size: 3rem;
 }
 
@@ -125,16 +119,16 @@ body {
 }
 
 .agenda-categories {
-    display: flex; /* Aligns items side by side */
-    justify-content: space-evenly; /* Spaces them evenly */
-    width: 100%; /* Ensures full width of the parent container */
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .agenda-category {
-    display: flex; /* Use flex for internal alignment */
-    flex-direction: column; /* Stacks the title and boxes vertically */
-    align-items: center; /* Centers content horizontally */
-    width: 45%; /* Adjusts the width of each section */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
     margin-bottom: 20px;
 }
 
@@ -142,14 +136,14 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    align-items: center; /* Centers each agenda box horizontally */
+    align-items: center;
 }
 
 .agenda-display-title {
     font-size: 2rem;
     margin-bottom: 15px;
     color: #e4e4e6;
-    text-align: center; /* Centers the title text */
+    text-align: center;
 }
 
 .agenda-box {
@@ -172,7 +166,6 @@ body {
     transform: translateY(-3px);
 }
 
-/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -195,7 +188,6 @@ body {
     }
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 600px) {
     .site-title {
         font-size: 2rem;

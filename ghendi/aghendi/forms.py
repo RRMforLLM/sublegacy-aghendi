@@ -4,4 +4,4 @@ from .models import Agenda
 class AgendaKeyForm(forms.ModelForm):
     class Meta:
         model = Agenda
-        fields = ['key']  # Only the key field will be displayed
+        fields = ['key']
