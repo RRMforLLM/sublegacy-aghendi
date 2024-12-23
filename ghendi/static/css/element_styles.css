@@ -152,6 +152,7 @@ textarea {
     min-width: 60px;
     white-space: nowrap;
     margin: 0 2px;
+    border: none;
 }
 
 .btn-small:hover {
